@@ -2,7 +2,6 @@ import React from "react";
 import HeroSection from "../components/HeroSection";
 import CategoryTile from "../components/CategoryTile";
 import FeaturedProducts from "../components/FeaturedProducts";
-import Footer from "../components/Footer";
 import CategorySection from "../components/CategorySection";
 
 const Homepage = ({ categories, activeCategory, onCategoryClick }) => {
@@ -13,7 +12,10 @@ const Homepage = ({ categories, activeCategory, onCategoryClick }) => {
   return (
     <>
       <HeroSection />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-4xl font-bold text-[#020632] mb-8">Для чого?</h2>
+      </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {elementItems.map((item) => (
             <CategoryTile
@@ -24,12 +26,13 @@ const Homepage = ({ categories, activeCategory, onCategoryClick }) => {
           ))}
         </div>
       </div>
-
-      <CategorySection displayCategories={categoryItems} />
+      <CategorySection
+        displayCategories={categoryItems}
+        onCategoryClick={onCategoryClick}
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <FeaturedProducts products={brandItems} />
       </div>
-      <Footer />
     </>
   );
 };

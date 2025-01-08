@@ -1,6 +1,6 @@
 import React from "react";
 
-const CategorySection = ({ displayCategories }) => {
+const CategorySection = ({ displayCategories, onCategoryClick }) => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
       <h2 className="text-4xl font-bold text-[#020632] mb-8">Категорії</h2>
@@ -9,6 +9,7 @@ const CategorySection = ({ displayCategories }) => {
         {displayCategories.map((product) => (
           <div
             key={product.id}
+            onClick={() => onCategoryClick("el-1")}
             className="group relative rounded-xl overflow-hidden bg-white transition-all duration-300 hover:shadow-xl cursor-pointer hover:-translate-y-1"
           >
             <div className="aspect-square relative">
@@ -32,7 +33,10 @@ const CategorySection = ({ displayCategories }) => {
       </div>
 
       <div className="mt-12 flex justify-center">
-        <button className="px-8 py-3 bg-[#020632] text-white rounded-full font-medium hover:bg-[#020632]/90 transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5">
+        <button
+          onClick={() => onCategoryClick("el-1")}
+          className="px-8 py-3 bg-[#020632] text-white rounded-full font-medium hover:bg-[#020632]/90 transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5"
+        >
           Більше
         </button>
       </div>

@@ -1242,43 +1242,147 @@ export const categories = [
         image: "/Photos/categories/body.png",
         subcategories: [
           {
-            id: "pass-13",
-            name: "КУЗОВ/ОСВІТЛЕННЯ/ДЗЕРКАЛА",
-            image: "/Photos/categories/body.png",
-            subcategories: [
-              {
-                id: "body-1",
-                name: "Освітлення / елементи",
-              },
-              {
-                id: "body-2",
-                name: "Кузов",
-              },
-              {
-                id: "body-3",
-                name: "Пластмаси / дефлектори",
-              },
-              {
-                id: "body-4",
-                name: "Аварійні накладки / накладки",
-              },
-              {
-                id: "body-5",
-                name: "Дзеркала / елементи",
-              },
-              {
-                id: "body-6",
-                name: "Елементи фіксації",
-              },
-              {
-                id: "body-7",
-                name: "Кабіна водія",
-              },
-              {
-                id: "body-8",
-                name: "Спойлери/Чохли/ Повітрозабірники",
-              },
-            ],
+            id: "body-1",
+            name: "Освітлення / елементи",
+          },
+          {
+            id: "body-2",
+            name: "Кузов",
+          },
+          {
+            id: "body-3",
+            name: "Пластмаси / дефлектори",
+          },
+          {
+            id: "body-4",
+            name: "Аварійні накладки / накладки",
+          },
+          {
+            id: "body-5",
+            name: "Дзеркала / елементи",
+          },
+          {
+            id: "body-6",
+            name: "Елементи фіксації",
+          },
+          {
+            id: "body-7",
+            name: "Кабіна водія",
+          },
+          {
+            id: "body-8",
+            name: "Спойлери/Чохли/ Повітрозабірники",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 5,
+    name: "ToolsCategories",
+    items: [
+      {
+        id: "tools-1",
+        name: "ОБЛАДНАННЯ ДЛЯ МАЙСТЕРНІ",
+        image: "/Photos/categories/workshop.png",
+        subcategories: [
+          {
+            id: "workshop-2",
+            name: "Діагностика",
+          },
+          {
+            id: "workshop-3",
+            name: "Кондиціонування",
+          },
+          {
+            id: "workshop-4",
+            name: "Обслуга коліс і шин",
+          },
+          {
+            id: "workshop-5",
+            name: "Підйомники",
+          },
+          {
+            id: "workshop-6",
+            name: "Точкові підйомники (жаби), опори, крани",
+          },
+          {
+            id: "workshop-7",
+            name: "Обслуга масел, змащень та робочих рідин",
+          },
+          {
+            id: "workshop-8",
+            name: "Обслуга гальмівної системи",
+          },
+          {
+            id: "workshop-9",
+            name: "Обслуга акумуляторів та електричної системи",
+          },
+        ],
+      },
+      {
+        id: "tools-2",
+        name: "РУЧНІ ІНСТРУМЕНТИ",
+        image: "/Photos/categories/hand-tools.png",
+        subcategories: [
+          {
+            id: "hand-1",
+            name: "Набори інструментів",
+          },
+          {
+            id: "hand-2",
+            name: "Плоскогубці, гайкові ключі",
+          },
+          {
+            id: "hand-3",
+            name: "Ключі з тріскачкою",
+          },
+          {
+            id: "hand-4",
+            name: "Головки і аксесуари",
+          },
+          {
+            id: "hand-5",
+            name: "Кусачки, клещі, комбіновані клещі",
+          },
+          {
+            id: "hand-6",
+            name: "Молотки",
+          },
+          {
+            id: "hand-7",
+            name: "Біти, викрутки",
+          },
+          {
+            id: "hand-8",
+            name: "Динамометричні ключі",
+          },
+        ],
+      },
+      {
+        id: "tools-3",
+        name: "ЕЛЕКТРОІНСТРУМЕНТ",
+        image: "/Photos/categories/power-tools.png",
+        subcategories: [
+          {
+            id: "power-1",
+            name: "Дрилі, шуруповерти",
+          },
+          {
+            id: "power-2",
+            name: "Ударні гайковерти",
+          },
+          {
+            id: "power-3",
+            name: "Шліфувальники",
+          },
+          {
+            id: "power-4",
+            name: "Пилки, різаки та аксесуари",
+          },
+          {
+            id: "power-5",
+            name: "Полірувальники",
           },
         ],
       },

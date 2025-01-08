@@ -3,7 +3,7 @@ import Footer from "../components/Footer";
 import CategoriesSlider from "../components/CategoriesSlider";
 import SubcategoriesList from "../components/SubcategoriesList";
 
-const PassengerCarsPage = ({ categories }) => {
+const PassengerCarsPage = ({ categories, onBack }) => {
   const [activeCategory, setActiveCategory] = useState(null);
   const subcategoriesContainerRef = useRef(null);
 
@@ -80,7 +80,6 @@ const PassengerCarsPage = ({ categories }) => {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 };

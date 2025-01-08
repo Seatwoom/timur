@@ -1,23 +1,25 @@
 import React, { useState, useRef, useEffect } from "react";
-import BrandModal from "./BrandModel";
+import BrandModal from "./BrandModal";
 
 const FeaturedProducts = ({ products }) => {
   const [showAll, setShowAll] = useState(false);
   const [selectedBrand, setSelectedBrand] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [showContactModal, setShowContactModal] = useState(false);
   const [gridHeight, setGridHeight] = useState("auto");
   const sectionRef = useRef(null);
   const gridRef = useRef(null);
   const titleRef = useRef(null);
 
   const INITIAL_DISPLAY_COUNT = 20;
-  const ITEMS_PER_ROW = 10; // For lg screens
+  const ITEMS_PER_ROW = 10;
   const safeProducts = products || [];
   const hasMoreToShow = safeProducts.length > INITIAL_DISPLAY_COUNT;
 
   const handleBrandClick = (brand) => {
     setSelectedBrand(brand);
     setIsModalOpen(true);
+    setShowContactModal(false);
   };
 
   const getRowIndex = (index) => Math.floor(index / ITEMS_PER_ROW);
@@ -35,7 +37,7 @@ const FeaturedProducts = ({ products }) => {
 
   const scrollToSection = () => {
     if (titleRef.current) {
-      const headerHeight = 64; // Adjust this value to match your header height
+      const headerHeight = 64;
       const elementPosition =
         titleRef.current.getBoundingClientRect().top + window.pageYOffset;
       const offsetPosition = elementPosition - headerHeight;
@@ -54,6 +56,12 @@ const FeaturedProducts = ({ products }) => {
     } else {
       setShowAll(true);
     }
+  };
+
+  const handleModalClose = () => {
+    setIsModalOpen(false);
+    setSelectedBrand(null);
+    setShowContactModal(false);
   };
 
   return (
@@ -123,10 +131,9 @@ const FeaturedProducts = ({ products }) => {
       <BrandModal
         brand={selectedBrand}
         isOpen={isModalOpen}
-        onClose={() => {
-          setIsModalOpen(false);
-          setSelectedBrand(null);
-        }}
+        onClose={handleModalClose}
+        showContactModal={showContactModal}
+        setShowContactModal={setShowContactModal}
       />
     </div>
   );
